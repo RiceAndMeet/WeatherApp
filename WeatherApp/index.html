@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="weather-icons.min.css">
+	<link rel="stylesheet" href="master.css">
+	
+	<title>Weather App</title>
+</head>
+<body>
+	<nav id="toolbar">
+		City 
+		<input class="content" id="city" type="text" value="Toronto" > 
+		<button class="content" id="request">Weather</button>
+	</nav>	
+
+	<div class="currentWeather">
+		<div class="content leftArea">
+			<div class="content" style="background-color:white">
+				<h6 class="text" id="date">date</h6>
+				<h2 class="text" id="time">time</h2>
+			</div>
+		</div>
+		<div class="content" >
+			<i class="wi wi-day-sunny wi-fw" id="currentIcon"></i>
+		</div>
+		<div class="content rightArea">
+			<h4 class="text" id="location">Toronto</h4>
+			<h2 class="text" id="temperature">0</h2>
+			<div class="form-group">
+				<input type ="button" value="&#8451" id="C">
+				<input type ="button" value="&#8457" id="F">
+			</div>
+			<h4 class="text" id="condition">Condition</h4>
+		</div>		
+	</div>
+	
+	<div class="forecasting">
+		<div class="content" id=fpanel>
+				<i class="wi wi-day-sunny wi-fw" id="icon1"></i>
+				<div class="content">
+					<h4 class="text" id="w1">Week</h4>
+					<h4 class="text" id="cd1">Condition</h4>
+					<h2 class="text" id="fT1">Temperature</h2>
+				</div>
+		</div>
+		<div class="content" id="fpanel">
+				<i class="wi wi-day-sunny wi-fw" id="icon2"></i>
+				<div class="content">
+					<h4 class="text" id="w2">Week</h4>
+					<h4 class="text" id="cd2">Condition</h4>
+					<h2 class="text" id="fT2">Temperature</h2>
+				</div>
+		</div>
+		<div class="content" id="fpanel">
+				<i class="wi wi-day-sunny wi-fw" id="icon3"></i>
+				<div class="content">
+					<h4 class="text" id="w3">Week</h4>
+					<h4 class="text" id="cd3">Condition</h4>
+					<h2 class="text" id="fT3">Temperature</h2>
+				</div>
+		</div>
+		<div class="content" id="fpanel">
+				<i class="wi wi-day-sunny wi-fw" id="icon4"></i>
+				<div class="content">
+					<h4 class="text" id="w4">Week</h4>
+					<h4 class="text" id="cd4">Condition</h4>
+					<h2 class="text" id="fT4">Temperature</h2>
+				</div>
+		</div>
+		<div class="content" id="fpanel">
+				<i class="wi wi-day-sunny wi-fw" id="icon5"></i>
+				<div class="content">
+					<h4 class="text" id="w5">Week</h4>
+					<h4 class="text" id="cd5">Condition</h4>
+					<h2 class="text" id="fT5">Temperature</h2>
+				</div>
+		</div>
+	</div>
+	
+	
+	<script src="weather.js"></script>
+</html>

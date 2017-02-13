@@ -1,0 +1,222 @@
+@CHARSET "UTF-8";
+nav{
+		width:100%;
+		background-color:orange;
+		height:30px;
+}
+
+@media screen and (min-width: 320px)and (max-width: 480px){
+
+	i{
+		font-size: 400%;
+	}	
+	body{
+		background-color:red;
+	}
+	#temperature{
+		display:inline;
+	}
+	.form-group{
+		display:inline;
+		margin:0;
+	}
+	#fpanel{
+		width:15%;
+	}
+	
+	.text{
+		margin:0;
+		border:0;
+	}
+	
+	.currentWeather{
+		width:100%;
+		margin:5px;		
+		padding:5px;
+		height:80px;
+		background-color:white;
+	}
+	.forecasting{
+		width:100%;
+	}
+	.content{
+		display:inline-block;
+		padding:5px;
+		margin:1px;
+		background-color:white;
+	}
+	#fpanel{
+		display:block;
+		width:100%;
+	}
+	.leftArea{
+		float:left;
+		margin-left:5px;
+	}
+	.rightArea{
+		float:right;
+		margin-right:5px;
+	}
+	
+
+}
+
+@media screen and (min-width: 480px) and (max-width: 768px){
+	body{
+		background-color:green;
+	}
+	i{
+		font-size: 400%;
+	}	
+	#temperature{
+		display:inline;
+	}
+	.form-group{
+		display:inline;
+		margin:0;
+	}
+	#fpanel{
+		width:15%;
+	}
+	
+	.text{
+		margin:0;
+		border:0;
+	}
+	
+	.currentWeather{
+		width:100%;
+		margin:5px;		
+		padding:5px;
+		height:80px;
+		background-color:white;
+	}
+	.forecasting{
+		width:100%;
+	}
+	.content{
+		display:inline-block;
+		padding:5px;
+		margin:1px;
+		background-color:white;
+	}
+	#fpanel{
+		display:block;
+		width:100%;
+	}
+	.leftArea{
+		float:left;
+		margin-left:5px;
+	}
+	.rightArea{
+		float:right;
+		margin-right:5px;
+	}
+	
+}
+
+@media screen and (min-width : 768px) and (max-width : 1024px){
+	body{
+		background-color:blue;
+	}
+	i{
+		font-size: 400%;
+	}	
+	#temperature{
+		display:inline;
+	}
+	.form-group{
+		display:inline;
+		margin:0;
+	}
+	#fpanel{
+		width:15%;
+	}
+	
+	.text{
+		margin:0;
+		border:0;
+	}
+	
+	.currentWeather{
+		width:100%;
+		margin:5px;		
+		padding:5px;
+		height:80px;
+		background-color:white;
+	}
+	.forecasting{
+		width:100%;
+	}
+	.content{
+		display:inline-block;
+		padding:5px;
+		margin:1px;
+		background-color:white;
+	}
+	#fpanel{
+		display:block;
+		width:100%;
+	}
+	.leftArea{
+		float:left;
+		margin-left:5px;
+	}
+	.rightArea{
+		float:right;
+		margin-right:5px;
+	}
+}
+
+@media screen and (min-width:1024px){
+	body{
+		background-color:yellow;
+	}
+	i{
+		font-size: 400%;
+	}	
+	#temperature{
+		display:inline;
+	}
+	.form-group{
+		display:inline;
+		margin:0;
+	}
+	#fpanel{
+		width:15%;
+	}
+	
+	.text{
+		margin:0;
+		border:0;
+	}
+	
+	.currentWeather{
+		width:100%;
+		margin:5px;		
+		padding:5px;
+		height:80px;
+		background-color:white;
+	}
+	.forecasting{
+		width:100%;
+	}
+	.content{
+		display:inline-block;
+		padding:5px;
+		margin:1px;
+		background-color:white;
+	}
+	#fpanel{
+		display:block;
+		width:100%;
+	}
+	.leftArea{
+		float:left;
+		margin-left:5px;
+	}
+	.rightArea{
+		float:right;
+		margin-right:5px;
+	}
+}
