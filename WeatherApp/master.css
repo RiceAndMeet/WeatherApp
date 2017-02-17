@@ -1,17 +1,66 @@
 @CHARSET "UTF-8";
 nav{
-		width:100%;
-		background-color:orange;
-		height:30px;
+		width:90%;
+		padding:5px;
 }
 
 @media screen and (min-width: 320px)and (max-width: 480px){
-
 	i{
 		font-size: 400%;
 	}	
 	body{
-		background-color:red;
+		background-color:#4e63ce;
+		background-image: url("https://s-media-cache-ak0.pinimg.com/736x/44/d3/dc/44d3dce76ac412714a87e8447279c095.jpg");
+	}
+	
+	#home{
+		height:60vh;
+		top:0;
+	}
+	#city{
+		width:200px;
+		padding:7px;
+		border:2px solid #429bf4;
+	}
+	#request{
+		margin-left:-5px;
+		padding: 8px;
+		background:#429bf4;
+		border:1px solid #429bf4;
+		color:white;
+		
+	}
+	#messager {
+		font-family: 'Pangolin', cursive;
+		font-size: 24px;
+		font-style: normal;
+		font-variant: normal;
+		font-weight: 500;
+		line-height: 26.4px;
+	}
+	#toolbar{
+		background-color: white;
+		opacity: 0.85;
+  		filter: alpha(opacity=85);
+		
+		height: 150px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top : 150px;
+	}
+	#toolbar h2 {
+	  margin: 5%;
+	  font-weight: bold;
+	  color: #000000;
+	}
+	.currentWeather{
+		width:100%;
+		margin:5px;		
+		padding:5px;
+		height:80px;
+		background-color:white;
+		opacity: 0.85;
+  		filter: alpha(opacity=85);
 	}
 	#temperature{
 		display:inline;
@@ -20,22 +69,11 @@ nav{
 		display:inline;
 		margin:0;
 	}
-	#fpanel{
-		width:15%;
-	}
-	
 	.text{
 		margin:0;
 		border:0;
 	}
 	
-	.currentWeather{
-		width:100%;
-		margin:5px;		
-		padding:5px;
-		height:80px;
-		background-color:white;
-	}
 	.forecasting{
 		width:100%;
 	}
@@ -44,6 +82,8 @@ nav{
 		padding:5px;
 		margin:1px;
 		background-color:white;
+		opacity: 0.85;
+  		filter: alpha(opacity=85);
 	}
 	#fpanel{
 		display:block;
@@ -68,22 +108,29 @@ nav{
 	i{
 		font-size: 400%;
 	}	
-	#temperature{
-		display:inline;
+	.text{
+		margin:0;
+		border:0;
+	}
+	.content{
+		display:inline-block;
+		padding:5px;
+		margin:1px;
+		background-color:white;
 	}
 	.form-group{
 		display:inline;
 		margin:0;
 	}
+	
+	
+	#temperature{
+		display:inline;
+	}
+	
 	#fpanel{
 		width:15%;
 	}
-	
-	.text{
-		margin:0;
-		border:0;
-	}
-	
 	.currentWeather{
 		width:100%;
 		margin:5px;		
@@ -94,12 +141,7 @@ nav{
 	.forecasting{
 		width:100%;
 	}
-	.content{
-		display:inline-block;
-		padding:5px;
-		margin:1px;
-		background-color:white;
-	}
+	
 	#fpanel{
 		display:block;
 		width:100%;

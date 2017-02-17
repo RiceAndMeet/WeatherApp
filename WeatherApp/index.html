@@ -5,17 +5,20 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="weather-icons.min.css">
 	<link rel="stylesheet" href="master.css">
+	<link href="https://fonts.googleapis.com/css?family=Pangolin" rel="stylesheet">
 	
 	<title>Weather App</title>
 </head>
 <body>
-	<nav id="toolbar">
-		City 
-		<input class="content" id="city" type="text" value="Toronto" > 
-		<button class="content" id="request">Weather</button>
-	</nav>	
+	<div id="home">
+		<nav id="toolbar">
+			<h2 id ="messager">What is the Weather Like? </h2>
+			<input class="content" id="city" type="text" placeholder="Enter City Name" > 
+			<button onclick="location.href='#viewStarter'"class="content" id="request">Search</button>
+		</nav>	
+	</div>
 
-	<div class="currentWeather">
+	<div class="currentWeather" id="viewStarter">
 		<div class="content leftArea">
 			<div class="content" style="background-color:white">
 				<h6 class="text" id="date">date</h6>
