@@ -10,25 +10,26 @@
 	<title>Weather App</title>
 </head>
 <body>
-	<div id="home">
+		
 		<nav id="toolbar">
 			<h2 id ="messager">What is the Weather Like? </h2>
-			<input class="content" id="city" type="text" placeholder="Enter City Name" > 
-			<button onclick="location.href='#viewStarter'"class="content" id="request">Search</button>
+ 			<div id="searchbar">
+ 				<input class="content" id="city" type="text" placeholder="Enter City Name" > 
+				<button onclick="location.href='#viewStarter'"class="content" id="request">Search</button>
+ 			</div>
+ 			
 		</nav>	
-	</div>
 
-	<div class="currentWeather" id="viewStarter">
-		<div class="content leftArea">
-			<div class="content" style="background-color:white">
-				<h6 class="text" id="date">date</h6>
-				<h2 class="text" id="time">time</h2>
+
+	<div class="currentWeather" >
+		<div class="content" id="leftArea">
+			<div class="content">
+				<h3 class="text" id="date">date</h3>
+				<h1 class="text" id="time">time</h1>
 			</div>
 		</div>
-		<div class="content" >
-			<i class="wi wi-day-sunny wi-fw" id="currentIcon"></i>
-		</div>
-		<div class="content rightArea">
+		<i class="wi wi-day-sunny wi-fw" id="currentIcon"></i>
+		<div class="content" id="rightArea">
 			<h4 class="text" id="location">Toronto</h4>
 			<h2 class="text" id="temperature">0</h2>
 			<div class="form-group">
@@ -39,45 +40,45 @@
 		</div>		
 	</div>
 	
-	<div class="forecasting">
+	<div id="forecasting">
 		<div class="content" id=fpanel>
 				<i class="wi wi-day-sunny wi-fw" id="icon1"></i>
-				<div class="content">
+				<div class="content" id="prediction">
 					<h4 class="text" id="w1">Week</h4>
 					<h4 class="text" id="cd1">Condition</h4>
-					<h2 class="text" id="fT1">Temperature</h2>
+					<h2 class="text" id="fT1">Temp</h2>
 				</div>
 		</div>
 		<div class="content" id="fpanel">
 				<i class="wi wi-day-sunny wi-fw" id="icon2"></i>
-				<div class="content">
+				<div class="content" id="prediction">
 					<h4 class="text" id="w2">Week</h4>
 					<h4 class="text" id="cd2">Condition</h4>
-					<h2 class="text" id="fT2">Temperature</h2>
+					<h2 class="text" id="fT2">Temp</h2>
 				</div>
 		</div>
 		<div class="content" id="fpanel">
 				<i class="wi wi-day-sunny wi-fw" id="icon3"></i>
-				<div class="content">
+				<div class="content" id="prediction">
 					<h4 class="text" id="w3">Week</h4>
 					<h4 class="text" id="cd3">Condition</h4>
-					<h2 class="text" id="fT3">Temperature</h2>
+					<h2 class="text" id="fT3">Temp</h2>
 				</div>
 		</div>
 		<div class="content" id="fpanel">
 				<i class="wi wi-day-sunny wi-fw" id="icon4"></i>
-				<div class="content">
+				<div class="content" id="prediction">
 					<h4 class="text" id="w4">Week</h4>
 					<h4 class="text" id="cd4">Condition</h4>
-					<h2 class="text" id="fT4">Temperature</h2>
+					<h2 class="text" id="fT4">Temp</h2>
 				</div>
 		</div>
 		<div class="content" id="fpanel">
 				<i class="wi wi-day-sunny wi-fw" id="icon5"></i>
-				<div class="content">
+				<div class="content" id="prediction">
 					<h4 class="text" id="w5">Week</h4>
 					<h4 class="text" id="cd5">Condition</h4>
-					<h2 class="text" id="fT5">Temperature</h2>
+					<h2 class="text" id="fT5">Temp</h2>
 				</div>
 		</div>
 	</div>
