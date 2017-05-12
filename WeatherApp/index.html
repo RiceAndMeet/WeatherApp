@@ -3,22 +3,28 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="weather-icons.min.css">
-	<link rel="stylesheet" href="master.css">
+	<link rel="stylesheet" href="css/weather-icons.min.css">
+	<link rel="stylesheet" href="css/master.css">
+	<link rel="stylesheet" href="css/autocomplete.css">
 	<link href="https://fonts.googleapis.com/css?family=Pangolin" rel="stylesheet">
-	
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+    
 	<title>Weather App</title>
 </head>
-<body>
-		
+<body ng-app="app">
 		<nav id="toolbar">
 			<h2 id ="messager">What is the Weather Like? </h2>
  			<div id="searchbar">
- 				<input class="content" id="city" type="text" placeholder="Enter City Name" > 
+ 				<input class="content" 
+ 				  id="city" type="text" placeholder="Enter City Name"> 
 				<button onclick="location.href='#viewStarter'"class="content" id="request">Search</button>
  			</div>
- 			
 		</nav>	
+	<div>	
+		<div ng-controller="MyCtrl">
+	      <autocomplete on-select="doSomethingElse" ng-model="input" data="movies" on-type="doSomething"></autocomplete>
+	    </div>
+	</div>
 
 
 	<div class="currentWeather" >
@@ -83,6 +89,7 @@
 		</div>
 	</div>
 	
-	
-	<script src="weather.js"></script>
+	<script src="script/app.js"></script>
+	<script src="script/autocomplete.js"></script>
+	<script src="script/weather.js"></script>
 </html>

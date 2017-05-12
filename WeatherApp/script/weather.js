@@ -8,7 +8,7 @@ var temp;
 var condition;
 
 window.onload=getTime();
-window.onload=currentTemp;
+window.onload= currentTemp();
 
 document.getElementById("request").addEventListener("click",currentTemp);
 
@@ -39,6 +39,8 @@ function currentTemp(){
 	}
 	
 	city= document.getElementById("city").value;
+	if (city =="")	
+		city = "Toronto";
 	request.open("POST","http://api.openweathermap.org/data/2.5/weather?q=" +
 			city +
 			"&APPID="+APIKey,true);
@@ -110,6 +112,8 @@ function forecast(){
 	}
 	
 	city= document.getElementById("city").value;
+	if (city == "")
+		city ="Toronto";
 	request.open("POST","http://api.openweathermap.org/data/2.5/forecast?q=" +
 			city +
 			"&APPID="+APIKey,true);
