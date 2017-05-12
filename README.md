@@ -1,2 +1,3 @@
 # WeatherApp
-<h3>External API:http://openweathermap.org/</h3>
+<h3>External API(OpenWeatherMap)</h3>
+<p>URL:http://openweathermap.org/</p>
