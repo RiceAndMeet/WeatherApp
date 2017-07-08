@@ -1,7 +1,7 @@
 {
-  "name": "WeatherApp",
+  "name": "react-tutorials",
   "version": "0.0.0",
-  "description": "Weather display",
+  "description": "",
   "main": "webpack.config.js",
   "dependencies": {
     "babel-core": "^6.17.0",
