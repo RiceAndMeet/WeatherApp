@@ -2,7 +2,7 @@
  * 
  */
 
-var APIKey = "36ed3e59aaf336b6e453ae2df6a178b2";
+var APIKey = "YourKey";
 var city = "Toronto";
 var temp;
 var condition;
