@@ -4,35 +4,30 @@ var $ = require('jquery');
 
 class Weather extends React.Component{
 	render(){
-		return(<div className="forecast"> 
+		return(<div className="weather_current"> 
 			<h1> {this.props.condition}</h1>
 			<h2> {this.props.temperature}</h2>
 			<h2> {this.props.humidity}</h2>
 		</div>);
 	}
 }
-class Form extends React.Component{
+
+class Forecast extends React.Component{
 	render(){
-		return (
-			<form onSubmit={this._handler.bind(this)}>
-				<input type="text" placeholder="City" ref={(input) => this._city = input} />
-				<input type="submit" value ="submit" /> 
-			</form>
-		);
+		return(<div className="weather_forecast"> 
+			<h1> {this.props.condition}</h1>
+			<h2> {this.props.temperature}</h2>
+			<h2> {this.props.humidity}</h2>
+		</div>);
 	}
-	_handler(event){
-		event.preventDefault();
-		this.props.enterCity(this._city);
-		console.log(this._city.value);
-	}
-} 
+}
 
 class Layout extends React.Component {
   constructor(){
   	super();
   	this.weather = {
 		APIKey: "078b696568e88cb4bd2c6fb3e75ccaa4",
-		currentWeather : function(city,forecast) {
+		currentWeather : function(city="Toronto",forecast) {
 			let key= this.APIKey;
 			let promise = $.Deferred();
 			let url;
@@ -58,7 +53,6 @@ class Layout extends React.Component {
 	this.state= {
 		current_weather:{},
 		weather_forecast:[],
-		city: 'Toronto'
 	}
   }
   
@@ -68,25 +62,32 @@ class Layout extends React.Component {
   		let count=0;
 	    return (
 	      <div className="weather_forecast">
-	      	 <Form enterCity= {this._enterCity.bind(this)} />
+	      	 <form onSubmit={this._formHandler.bind(this)}>
+				<input type="text" placeholder="City" ref={(input) => this._city = input} />
+				<input type="submit" value ="submit" /> 
+			</form>
 	      	 <Weather condition={this.state.current_weather.condition} temperature={this.state.current_weather.temperature} 
 	      	 	humidity={this.state.current_weather.humidity} />
-	      	{arr.map(data =>{
-	      	 	return (<Weather condition={data.condition} temperature={data.temperature} 
-	      	 	humidity={data.humidity} key={++count}/>);
-	      	 	})
+	      	{arr.map(data =>{ 
+	      	return (<Forecast condition={data.condition} temperature={data.temperature} humidity={data.humidity} key={++count}/>);
+	      	})
 	      	}
 		  </div>              	
 	    );
-	}else return (<div>Loading</div>);
+	}
+	else return (<div>Loading</div>);
   }
 
-  _enterCity(city){
-  	this.setState({city:city.value});
+  _formHandler(event){
+  	event.preventDefault();
+  	let city = this._city.value;
+  	this._getWeatherInfo(city);
+  	this._getWeatherForcast(city);
+  	console.log(city);
   }
 
-  _getWeatherInfo(){
-	let promise = this.weather.currentWeather("Toronto",false);
+  _getWeatherInfo(city){
+	let promise = this.weather.currentWeather(city,false);
 	let weather_current={};
 	let obj = this;
 	promise.done (function(result){
@@ -94,13 +95,12 @@ class Layout extends React.Component {
 			temperature :result.main.temp,
 			humidity : result.main.humidity,
 			condition : result.weather[0].main}
-		});
+		});		
 	}).fail(function(error){console.log(error);});
-
   }
 
-  _getWeatherForcast(){
-  	let promise = this.weather.currentWeather("Toronto",true);
+  _getWeatherForcast(city){
+  	let promise = this.weather.currentWeather(city,true);
 	let obj = this;
 	let arr= [];
 	promise.done (function(result){
@@ -114,14 +114,14 @@ class Layout extends React.Component {
 			});
 		}
 		obj.setState({weather_forecast:arr});
-
+		console.log(result);	
 	}).fail(function(error){console.log(error);});
   			
   }
 
   componentDidMount(){
-  	this._getWeatherInfo();
-  	this._getWeatherForcast();
+  	this._getWeatherInfo("Toronto");
+  	this._getWeatherForcast("Toronto");
   }
 }
 
