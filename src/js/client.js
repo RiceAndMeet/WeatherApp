@@ -18,6 +18,7 @@ class Forecast extends React.Component{
 			<h1> {this.props.condition}</h1>
 			<h2> {this.props.temperature}</h2>
 			<h2> {this.props.humidity}</h2>
+			<h5> {this.props.date}</h5>
 		</div>);
 	}
 }
@@ -61,15 +62,18 @@ class Layout extends React.Component {
   		let arr = this.state.weather_forecast;
   		let count=0;
 	    return (
-	      <div className="weather_forecast">
+	      <div>
 	      	 <form onSubmit={this._formHandler.bind(this)}>
 				<input type="text" placeholder="City" ref={(input) => this._city = input} />
 				<input type="submit" value ="submit" /> 
 			</form>
+
 	      	 <Weather condition={this.state.current_weather.condition} temperature={this.state.current_weather.temperature} 
 	      	 	humidity={this.state.current_weather.humidity} />
+	      	
 	      	{arr.map(data =>{ 
-	      	return (<Forecast condition={data.condition} temperature={data.temperature} humidity={data.humidity} key={++count}/>);
+	      	return (<Forecast condition={data.condition} temperature={data.temperature} 
+	      			humidity={data.humidity} date={data.date}key={++count}/>);
 	      	})
 	      	}
 		  </div>              	
@@ -110,11 +114,11 @@ class Layout extends React.Component {
 			arr.push({
 				temperature:list_item.main.temp,
 				humidity:list_item.main.humidity,
-				condition:list_item.weather[0].main
+				condition:list_item.weather[0].main,
+				date: list_item.dt_txt
 			});
 		}
 		obj.setState({weather_forecast:arr});
-		console.log(result);	
 	}).fail(function(error){console.log(error);});
   			
   }
